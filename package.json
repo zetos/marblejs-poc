@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start": "ts-node-dev --respawn src/index.ts",
+    "test": "jest --expand --onlyChanged",
+    "test:watch": "jest --expand --onlyChanged --watch",
+    "coverage": "npx jest --coverage",
+    "compile": "tsc --build tsconfig.json"  },
   "keywords": [],
   "author": "",
   "license": "ISC",
