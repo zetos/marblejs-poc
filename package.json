@@ -8,7 +8,8 @@
     "test": "jest --expand --onlyChanged",
     "test:watch": "jest --expand --onlyChanged --watch",
     "coverage": "npx jest --coverage",
-    "compile": "tsc --build tsconfig.json"  },
+    "compile": "tsc --build tsconfig.json"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -36,6 +37,7 @@
     "@marblejs/middleware-logger": "^2.3.1",
     "@marblejs/middleware-multipart": "^2.3.1",
     "axios": "^0.19.0",
+    "dotenv": "^8.2.0",
     "rxjs": "^6.5.3"
   }
 }
