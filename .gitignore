@@ -1,0 +1,15 @@
+# IDE
+.idea/
+.vscode/
+
+node_modules/
+build/
+tmp/
+temp/
+uploads/*.*
+coverage/
+dist/
+
+# Environment
+.env
+.local.env
