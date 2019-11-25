@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 // import path from 'path';
 import {
   r,
@@ -22,8 +23,17 @@ const stream: StreamHandler = ({ file, filename }) => {
   return of({ destination });
 };
 
+const testFunc = (body: any) => {
+  console.log('body:', body);
+  return { body };
+};
+
 export const getApiEffect$: HttpEffect = req$ =>
-  req$.pipe(mapTo({ body: 'getAPI' }));
+  req$.pipe(
+    map(req => testFunc(req.body))
+    // mergeMap(testFunc),
+    // mapTo({ body: 'getAPI' })
+  );
 
 export const root$ = r.pipe(
   r.matchPath('/'),
